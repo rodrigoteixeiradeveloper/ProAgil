@@ -2,3 +2,8 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
+.h1, h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
