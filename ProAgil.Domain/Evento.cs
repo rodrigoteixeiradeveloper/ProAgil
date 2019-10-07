@@ -10,13 +10,12 @@ namespace ProAgil.Domain
         public DateTime DataEvento { get; set; }
         public string Tema { get; set; }
         public int QtdPessoas { get; set; }
-        public string Lote { get; set; }
         public string ImagemUrl { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
         public List<Lote> Lotes { get; set; }
-        public List<RedeSocial> RedeSociais { get;set; }
-        public List<PalestranteEvento> PalestrantesEvento { get;set; }
+        public List<RedeSocial> RedesSociais { get;set; }
+        public List<PalestranteEvento> PalestrantesEventos { get;set; }
         
     }
 }
