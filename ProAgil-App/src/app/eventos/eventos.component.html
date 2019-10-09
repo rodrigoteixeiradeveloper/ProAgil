@@ -67,7 +67,7 @@
           </td>
         </tr>
   </tbody>
-  <tfoot *ngIf="!eventos.length">
+  <tfoot *ngIf="!eventos">
     <tr>
       <td colspan="7" class="text-center">
         <h5>Nenhum evento encontrado</h5>
@@ -119,7 +119,7 @@
                   <label>Data e Hora</label>
                   <input type="text" class="form-control"
                   bsDatepicker
-                  [bsConfig]="{ dateInputFormat : 'DD/MM/YYYY hh:mm a' }"
+                  [bsConfig]="{ dateInputFormat : 'DD/MM/YYYY hh:mm' }"
                   [ngClass]="{'is-invalid': registerForm.get('dataEvento').errors && registerForm.get('dataEvento').touched}"
                   formControlName="dataEvento">
                   <div class="invalid-feedback" *ngIf="registerForm.get('dataEvento').hasError('required')  && registerForm.get('dataEvento').touched">

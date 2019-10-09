@@ -8,6 +8,7 @@ namespace ProAgil.WebAPI.Dtos
         public int Id { get; set; }
         public string Local { get; set; }
         public string DataEvento { get; set; }
+        
         [Required (ErrorMessage="O {0} deve ser Preenchido")]
         [StringLength (100, MinimumLength=3, ErrorMessage="O Tema deve no minumo 3 e máximo 100 Caraters")]
         public string Tema { get; set; }
