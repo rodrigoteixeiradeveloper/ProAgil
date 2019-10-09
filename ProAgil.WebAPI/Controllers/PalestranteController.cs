@@ -94,7 +94,7 @@ namespace ProAgil.WebAPI.Controllers
         {
             try
             {
-                var palestrante = await _repo.GetEventosAsyncById(PalestranteId, false);
+                var palestrante = await _repo.GetEventoAsyncById(PalestranteId, false);
                 if(palestrante == null) return NotFound();
 
                 _repo.Delete(model);

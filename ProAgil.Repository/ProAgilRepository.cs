@@ -45,7 +45,7 @@ namespace ProAgil.Repository
                     .ThenInclude(p => p.Palestrante);
             }
 
-            query = query.OrderByDescending(c => c.DataEvento);
+            query = query.OrderBy(c => c.Id);
 
             return await query.ToArrayAsync();
         }
@@ -69,7 +69,7 @@ namespace ProAgil.Repository
             return await query.ToArrayAsync();
         }
 
-        public async Task<Evento> GetEventosAsyncById(int EventoId, bool includePalestrante = false)
+        public async Task<Evento> GetEventoAsyncById(int EventoId, bool includePalestrante = false)
         {
             IQueryable<Evento> query = _context.Eventos
                 .Include(c => c.Lotes)
@@ -82,7 +82,7 @@ namespace ProAgil.Repository
                     .ThenInclude(p => p.Palestrante);
             }
 
-            query = query.OrderByDescending(c => c.DataEvento)
+            query = query.OrderBy(c => c.Id)
                         .Where(c => c.Id == EventoId);
 
             return await query.FirstOrDefaultAsync();
