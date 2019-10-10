@@ -66,8 +66,9 @@ namespace ProAgil.WebAPI.Controllers
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, $"Banco de dados falhou {ex.Message}");
             }
-
-            return BadRequest("Error ao tenrar realizar upload");
+            
+            BadRequest("Error ao tenrar realizar upload");
+            
         }
 
         [HttpGet("{EventoId}")]
