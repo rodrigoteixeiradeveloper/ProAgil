@@ -9,11 +9,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { EventosComponent } from './eventos/eventos.component';
 import { NavComponent } from './nav/nav.component';
+import { EventosComponent } from './eventos/eventos.component';
 import { PalestrantesComponent } from './palestrantes/palestrantes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContatosComponent } from './contatos/contatos.component';
+import { TituloComponent } from './_shared/titulo/titulo.component';
 
 import { EventoService } from './_services/evento.service';
 
@@ -22,13 +23,13 @@ import { DateTimeFormatPipePipe } from './_helps/DateTimeFormatPipe.pipe';
 @NgModule({
    declarations: [
       AppComponent,
-      EventosComponent,
       NavComponent,
-      DateTimeFormatPipePipe,
-      PalestrantesComponent,
+      EventosComponent,
       PalestrantesComponent,
       DashboardComponent,
-      ContatosComponent
+      ContatosComponent,
+      TituloComponent,
+      DateTimeFormatPipePipe
    ],
    imports: [
       BrowserModule,
@@ -39,10 +40,10 @@ import { DateTimeFormatPipePipe } from './_helps/DateTimeFormatPipe.pipe';
       TooltipModule.forRoot(),
       ModalModule.forRoot(),
       BsDatepickerModule.forRoot(),
+      ToastrModule.forRoot(),
       BrowserAnimationsModule,
       ReactiveFormsModule,
-      BrowserAnimationsModule,
-      ToastrModule.forRoot()
+      BrowserAnimationsModule
    ],
    providers: [
       EventoService
